@@ -1,17 +1,13 @@
-/*
-Jeff
-CIS18
- */
-public class Threadz implements Runnable {
+public class UninstantiatedThreadz implements Runnable {
     private Thread t;
     private String threadName;
-    Threadz(String name){
+    UninstantiatedThreadz(String name){
         threadName = name;
     }
     @Override
     public void run() {
-        LazyInitializedSingleton lazy = LazyInitializedSingleton.getInstance();
-        lazy.changeSomething(t.getName());
+
+        Uninstantiated.changeSomething(t.getName());
     }
     public void start() {
         if (t == null) {
@@ -20,3 +16,4 @@ public class Threadz implements Runnable {
         }
     }
 }
+

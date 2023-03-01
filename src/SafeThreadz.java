@@ -11,7 +11,7 @@ public class SafeThreadz implements Runnable {
     @Override
     public void run() {
         ThreadSafeLazyInitializedSingleton safe = ThreadSafeLazyInitializedSingleton.getInstance();
-        System.out.print(t.getName()  + "-Singleton Hashcode---" +  safe.hashCode() + "\n");
+        safe.changeSomething(threadName);
     }
     public void start() {
         if (t == null) {

@@ -38,14 +38,32 @@ public class Main {
             thread.start();
         }
     }
+    private static void uninstantiated() {
+        ArrayList<UninstantiatedThreadz> uninstantiatedThreadz = new ArrayList();
+        UninstantiatedThreadz T1 = new UninstantiatedThreadz("Thread1");
+        UninstantiatedThreadz T2 = new UninstantiatedThreadz("Thread2");
+        UninstantiatedThreadz T3 = new UninstantiatedThreadz("Thread3");
+        UninstantiatedThreadz T4 = new UninstantiatedThreadz("Thread4");
+        uninstantiatedThreadz.add(0,T1);
+        uninstantiatedThreadz.add(1,T2);
+        uninstantiatedThreadz.add(2,T3);
+        uninstantiatedThreadz.add(3,T4);
+        for (UninstantiatedThreadz thread : uninstantiatedThreadz){
+            thread.start();
+        }
+    }
     public static void main(String[] args) {
         Scanner scanny = new Scanner(System.in);
-        System.out.println("1 for unsafe 2 for safe");
+        System.out.println("1)unsafe 2)safe 3)uninstantiated");
         String choice = scanny.nextLine();
         if (Objects.equals(choice, "1")) {
             unsafe();
         } else if (Objects.equals(choice, "2")) {
             safe();
+        } else if (Objects.equals(choice, "3")) {
+            uninstantiated();
         }
     }
+
+
 }
