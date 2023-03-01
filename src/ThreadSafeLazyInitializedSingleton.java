@@ -1,3 +1,7 @@
+/*
+Jeff
+CIS18
+ */
 public class ThreadSafeLazyInitializedSingleton  {
     private static ThreadSafeLazyInitializedSingleton uniqueInstance = null;
     private ThreadSafeLazyInitializedSingleton(){}

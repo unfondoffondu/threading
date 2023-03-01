@@ -1,3 +1,7 @@
+/*
+Jeff
+CIS18
+ */
 public class SafeThreadz implements Runnable {
     private Thread t;
     private String threadName;

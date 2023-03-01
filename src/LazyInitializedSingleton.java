@@ -1,4 +1,7 @@
-
+/*
+Jeff
+CIS18
+ */
 public class LazyInitializedSingleton {
 
     private static LazyInitializedSingleton uniqueInstance;

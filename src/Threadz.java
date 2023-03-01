@@ -1,3 +1,7 @@
+/*
+Jeff
+CIS18
+ */
 public class Threadz implements Runnable {
     private Thread t;
     private String threadName;
